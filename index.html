@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1"/>
+    <title></title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <style>
+        header{
+            width:16rem;
+            height:2.5rem;
+            background:-webkit-linear-gradient(#fff,#ebebeb);
+            position:relative;
+        }
+        header a{
+            display:block;
+            width:3.25rem;
+            height:1.6rem;
+            background:url("img/return.png") no-repeat;
+            background-size:100%;
+            text-indent:-999em;
+            position:absolute;
+            left:0.5rem;
+            top:0.5rem;
+        }
+        header img{
+            width:9.4rem;
+            height:2.2rem;
+            margin-left:3.3rem;
+           padding-top:0.2rem;
+        }
+
+        .ad{
+            width:16rem;
+            height:7.5rem;
+            position:relative;
+        }
+        .ad ul{
+            width:16rem;
+            height:6.675rem;
+            overflow:hidden;
+        }
+        .ad ul li{
+            float:left;
+        }
+        .ad ul li img{
+            width:100%;
+        }
+        .ad ol{
+            width:2.5rem;
+            height:0.25rem;
+            position:absolute;
+            left:6.125rem;
+            top:7.25rem;
+        }
+        .ad ol li{
+            float:left;
+            margin:0 0.125rem;
+            width:0.25rem;
+            height:0.25rem;
+            border-radius:50%;
+            background:#a9a9a9;
+        }
+        .ad ol .on{
+            background:#ff4300;
+        }
+
+        .menu ul{
+            width:16rem;
+            height:9rem;
+        }
+        .menu ul li{
+            width:2rem;
+            height:3rem;
+            float:left;
+            margin:1rem 0.9rem;
+        }
+        .menu ul li span{
+            display:block;
+            width:2rem;
+            height:2rem;
+            border-radius:50%;
+        }
+        .menu ul li span img{
+            width:100%;
+        }
+        .menu ul li p{
+            font-size:0.575rem;
+            color:#999;
+            text-align:center;
+            margin-top:0.425rem;
+        }
+        .menu ul .m1 span{
+            background:#da3809;
+        }
+        .menu ul .m2 span{
+            background:#18a78c;
+        }
+        .menu ul .m3 span{
+            background:#000;
+        }
+        .menu ul .m4 span{
+            background:#ff529d;
+        }
+        .menu ul .m5 span{
+            background:#cfa871;
+        }
+        .menu ul .m6 span{
+            background:#ffb021;
+        }
+        .menu ul .m7 span{
+            background:#a1c36f;
+        }
+        .menu ul .m8 span{
+            background:#f5493c;
+        }
+
+        .hot{
+            width:15rem;
+            height:43.65rem;
+            margin:0 auto;
+        }
+        .hot .title{
+            width:100%;
+            height:1.9rem;
+            border-bottom:0.1rem solid #dcdcdc;
+            font-size:0.675rem;
+            font-weight:bold;
+            color:#333;
+
+        }
+        .hot .title .s1{
+            display:block;
+            width:4rem;
+            height:0.75rem;
+            border-left:0.1rem solid #d51938;
+            padding-left:0.45rem;
+        }
+        .hot ul li a{
+            display:block;
+            width:100%;
+            height:3rem;
+            margin:0.775rem 0;
+            background:#f4f4f4;
+            line-height:3rem;
+        }
+        .hot ul li a .t1{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#e00202;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .img1{
+            width:4.5rem;
+            height:100%;
+        }
+        .hot ul li a .sp2{
+            width:3.6rem;
+            height:1.5rem;
+            line-height:0.75rem;
+            margin:0.7rem 1rem 0.775rem 0.55rem;
+            font-size:0.625rem;
+            font-weight:bold;
+            color:#999;
+        }
+        .hot ul li a .sp2 p{
+            font-size:0.575rem;
+        }
+        .hot ul li a .sp2 p span{
+            text-decoration:line-through;
+        }
+        .hot ul li a .sp3{
+            display:block;
+            width:2.4rem;
+            height:0.55rem;
+            line-height:0.55rem;
+            margin:1.25rem 1rem 0 0;
+            background:url("img/jt.png")no-repeat right;
+            font-size:0.65rem;
+            font-weight:bold;
+            color:#d51938;
+        }
+        .hot ul li a .t2{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ff4800;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t3{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ff7300;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t4{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ff9d00;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t5{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ffa800;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t6{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ffb400;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t7{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ffba00;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t8{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#fcd000;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t9{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ffd719;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot ul li a .t10{
+            display:block;
+            width:1.5rem;
+            height:100%;
+            background:#ffe152;
+            font-size:0.875rem;
+            font-weight:bold;
+            text-align:center;
+            line-height:3rem;
+            color:#fff;
+        }
+        .hot .end a{
+            display:block;
+            width:100%;
+            height:3rem;
+            margin:0.775rem 0;
+            background:#f4f4f4;
+            line-height:3rem;
+            font-size:0.675rem;
+            font-weight:bold;
+            text-align:center;
+            color:#666;
+        }
+
+        .main{
+            width:15rem;
+            height:39rem;
+            margin:0.85rem auto;
+        }
+        .main div{
+            width:15rem;
+            height:8.75rem;
+        }
+        .main div img{
+            width:3.75rem;
+            height:100%;
+        }
+        .main ul{
+            width:11.25rem;
+            height:100%;
+        }
+        .main ul li{
+            float:left;
+            border:1px solid #eee;
+            width:3.66rem;
+            height:2.1rem;
+        }
+        .main ul li a{
+            display:block;
+            font-size:0.65rem;
+            color:#999;
+            text-align:center;
+            line-height:2.1rem;
+            font-family:'Microsoft Yahei';
+        }
+        .main p a{
+            display:block;
+            width:100%;
+            height:3rem;
+            margin:0.775rem 0;
+            background:#f4f4f4;
+            line-height:3rem;
+            font-size:0.675rem;
+            font-weight:bold;
+            text-align:center;
+            color:#666;
+        }
+        .main ul .pink a{
+            color:#d51942;
+        }
+
+        .client{
+            width:15rem;
+            height:4rem;
+            margin:0.7rem auto;
+        }
+        .client ul{
+            width:100%;
+            height:100%;
+            border:1px solid #dcdcdc;
+        }
+        .client ul li{
+            float:left;
+        }
+        .client ul li a{
+            display:block;
+            width:4.95rem;
+            height:3.95rem;
+            border-right:1px solid #dcdcdc;
+            text-align:center;
+        }
+        .client ul .last a{
+            border:none;
+        }
+        .client ul li a img{
+            width:1.1rem;
+            height:1.1rem;
+            padding:0.8rem 1.925rem;
+        }
+        .client ul li a span{
+            font-size:0.575rem;
+            color:#999;
+            font-weight:bold;
+        }
+
+        .login{
+            width:100%;
+            height:2.2rem;
+            background:#f8f8f8;
+            line-height:2.2rem;
+        }
+        .login ul li a{
+            font-size:0.65rem;
+            color:#333;
+            font-family:'Microsoft Yahei';
+            margin:0 0.2875rem;
+            font-weight:bold;
+        }
+        .login ul .last a{
+            display:block;
+            width:2.45rem;
+            height:2rem;
+            font-size:0.6rem;
+            background:url("img/top.png")no-repeat right;
+            margin:0.1rem 1rem 0 0;
+        }
+
+        .footer{
+            width:100%;
+            height:8.575rem;
+            background:#eee;
+            text-align:center;
+        }
+        .footer ul li a{
+            display:block;
+            width:2.1rem;
+            height:2.5rem;
+            font-size:0.675rem;
+            color:#333;
+            font-weight:bold;
+            margin:0 1rem;
+            line-height:2.5rem;
+        }
+        .footer p{
+            font-size:0.525rem;
+            color:#999;
+            width:9rem;
+            height:1rem;
+            margin-left:3.2rem;
+        }
+        .footer img{
+            width:13rem;
+            height:4.425rem;
+            margin:3rem 1.5rem;
+        }
+    </style>
+    <script>
+        var rem = 20;
+        ;(function(win,doc){
+            var rem = 20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem+'px';
+            win.addEventListener('resize',function(){
+                var rem = 20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem+'px';
+            },false);
+        })(window,document);
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:;">返回</a>
+        <img src="img/logo.png"/>
+    </header>
+    <section class="ad">
+        <ul>
+            <li><img src="img/banner.png"/></li>
+            <li><img src="img/banner.png"/></li>
+            <li><img src="img/banner.png"/></li>
+            <li><img src="img/banner.png"/></li>
+            <li><img src="img/banner.png"/></li>
+        </ul>
+        <ol>
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </section>
+
+    <section class="menu">
+        <ul>
+            <li class="m1"><span><img src="img/m1.png"/></span><p>商品</p></li>
+            <li class="m2"><span><img src="img/m2.png"/></span><p>生活</p></li>
+            <li class="m3"><span><img src="img/m3.png"/></span><p>品牌</p></li>
+            <li class="m4"><span><img src="img/m4.png"/></span><p>聚宝盆</p></li>
+            <li class="m5"><span><img src="img/m5.png"/></span><p>聚名品</p></li>
+            <li class="m6"><span><img src="img/m6.png"/></span><p>聚家装</p></li>
+            <li class="m7"><span><img src="img/m7.png"/></span><p>聚透</p></li>
+            <li class="m8"><span><img src="img/m8.png"/></span><p>客户端</p></li>
+        </ul>
+    </section>
+
+    <section class="hot">
+        <p class="title clearfix">
+            <span class="s1 fl">聚划算热卖排行</span>
+            <i class="fr">TOP10</i>
+        </p>
+        <ul>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t1 fl">1</span>
+                    <img src="img/hot%20(1).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>5.3折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥51</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t2 fl">2</span>
+                    <img src="img/hot%20(2).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>3.2折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥66</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t3 fl">3</span>
+                    <img src="img/hot%20(3).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;54423
+                        <p>6.5折 ￥<span>199</span></p>
+                    </span>
+                    <span class="sp3 fr">￥88</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t4 fl">4</span>
+                    <img src="img/hot%20(4).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>2.3折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥100</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t5 fl">5</span>
+                    <img src="img/hot%20(5).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;42423
+                        <p>2.9折 ￥<span>239</span></p>
+                    </span>
+                    <span class="sp3 fr">￥77</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t6 fl">6</span>
+                    <img src="img/hot%20(6).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;58423
+                        <p>5.3折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥99</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t7 fl">7</span>
+                    <img src="img/hot%20(7).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>1.3折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥156</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t8 fl">8</span>
+                    <img src="img/hot%20(8).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>4.3折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥86</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t9 fl">9</span>
+                    <img src="img/hot%20(9).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;77423
+                        <p>2.6折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥81</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="clearfix">
+                    <span class="t10 fl">10</span>
+                    <img src="img/hot%20(10).png" class="img1 fl"/>
+                    <span class="sp2 fl">已售&nbsp;68423
+                        <p>3.4折 ￥<span>299</span></p>
+                    </span>
+                    <span class="sp3 fr">￥68</span>
+                </a>
+            </li>
+        </ul>
+        <p class="end"><a href="javascript:;">更多划算  逛起来!</a></p>
+    </section>
+
+    <section class="main">
+        <div class="ware clearfix">
+            <img src="img/team1.png" class="fl"/>
+            <ul class="fl clearfix">
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+            </ul>
+        </div>
+        <p><a href="javascript:;">精彩商品  逛起来!</a></p>
+        <div class="life clearfix">
+            <img src="img/team2.png" class="fl"/>
+            <ul class="fl clearfix">
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+            </ul>
+        </div>
+        <p><a href="javascript:;">品质生活  逛起来!</a></p>
+        <div class="brand clearfix">
+            <img src="img/team3.png" class="fl"/>
+            <ul class="fl clearfix">
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li class="pink"><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+                <li><a href="javascript:;">服饰</a></li>
+            </ul>
+        </div>
+        <p><a href="javascript:;">品牌折扣  逛起来!</a></p>
+    </section>
+
+    <section class="client">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/c1.png"/>
+                    <span>iOS客户端</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="img/c2.png"/>
+                    <span>安卓客户端</span>
+                </a>
+            </li>
+            <li class="last">
+                <a href="javascript:;">
+                    <img src="img/c3.png"/>
+                    <span>意见反馈</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="login">
+        <ul class="clearfix">
+            <li class="fl"><a href="javascript:;">登录</a></li>
+            <li class="fl"><a href="javascript:;">注册</a></li>
+            <li class="last fr"><a href="javascript:;">TOP</a></li>
+        </ul>
+    </section>
+
+    <section class="footer">
+        <ul>
+            <li class="fl"><a href="javascript:;">标准版</a></li>
+            <li class="fl"><a href="javascript:;">电脑版</a></li>
+        </ul>
+        <p>@2013 浙B2-20080224  服务中心</p>
+        <img src="img/footer.png"/>
+    </section>
+</body>
+</html>
